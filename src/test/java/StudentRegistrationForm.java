@@ -37,7 +37,7 @@ public class StudentRegistrationForm {
         $("#subjectsInput").setValue("Maths").pressEnter();
         $("#hobbiesWrapper").$(byText("Reading")).click();
 
-        File file = new File("/Users/egorblinov/IdeaProjects/qa_guru/DemoQa/src/test/resources/picture/1.JPG");
+        File file = new File("src/test/resources/picture/1.JPG");
         $("#uploadPicture").uploadFile(file);
 
         $("#currentAddress").setValue("Moskow nishebrodovo 5");
