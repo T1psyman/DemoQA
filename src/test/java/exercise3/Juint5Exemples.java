@@ -1,3 +1,5 @@
+package HW3;
+
 import org.junit.jupiter.api.*;
 
 public class Juint5Exemples {
