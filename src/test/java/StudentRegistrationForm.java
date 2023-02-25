@@ -6,10 +6,8 @@ import java.io.File;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.*;
-import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.files.DownloadActions.click;
+
 
 public class StudentRegistrationForm {
 
@@ -20,7 +18,7 @@ public class StudentRegistrationForm {
     }
 
     @Test
-    void fillFormTest() throws InterruptedException {
+    void fillFormTest() {
         open("/automation-practice-form");
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
@@ -34,13 +32,12 @@ public class StudentRegistrationForm {
         $("#dateOfBirthInput").click();
         $(".react-datepicker__year-select").$(byText("1980")).click();
         $(".react-datepicker__month-select").$(byText("November")).click();
-        $(".react-datepicker__month-select").$(byText("November")).click();
         $(".react-datepicker__day--017").click();
 
         $("#subjectsInput").setValue("Maths").pressEnter();
         $("#hobbiesWrapper").$(byText("Reading")).click();
 
-        File file = new File("/Users/egorblinov/Downloads/1.JPG");
+        File file = new File("/Users/egorblinov/IdeaProjects/qa_guru/DemoQa/src/test/resources/picture/1.JPG");
         $("#uploadPicture").uploadFile(file);
 
         $("#currentAddress").setValue("Moskow nishebrodovo 5");
@@ -60,6 +57,8 @@ public class StudentRegistrationForm {
         $(".modal-body").shouldHave(text("Reading"));
         $(".modal-body").shouldHave(text("Moskow nishebrodovo 5"));
         $(".modal-body").shouldHave(text("Haryana Karnal"));
+        $(".modal-body").shouldHave(text("1.JPG"));
+
 
         $("#closeLargeModal").click();
 
