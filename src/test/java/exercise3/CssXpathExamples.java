@@ -1,4 +1,4 @@
-package HW3;
+package exercise3;
 
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;

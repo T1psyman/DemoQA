@@ -1,4 +1,4 @@
-package HW3;
+package exercise3;
 
 import org.junit.jupiter.api.*;
 
