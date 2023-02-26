@@ -1,4 +1,4 @@
-package exercise4.HW;
+package exercise4.homework;
 
 import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.Test;
@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class SoftAssertionExampleJunit5 {
 
     @Test
-    void shouldBeSAExeplejunit5() {
+    void shouldBeAsExampleJunit5() {
         open("https://github.com/selenide/selenide");
         $("#wiki-tab").click();
 
