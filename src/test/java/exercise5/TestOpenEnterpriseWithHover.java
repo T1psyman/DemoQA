@@ -42,4 +42,9 @@ public class TestOpenEnterpriseWithHover {
         columnA.dragAndDropTo(columnB);
         columnB.shouldHave(text("A"));
     }
+
+    @Test
+    void name() {
+
+    }
 }

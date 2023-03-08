@@ -19,9 +19,9 @@ public class SoftAssertionExampleJunit5 {
                 $(byText("Show 2 more pages…"));
 
         boolean softAssertableButton = $("div.js-wiki-sidebar-toggle-display").
-                $$("ul li").get(19).equals(text("SoftAssertions"));
+                $$("ul li").equals(text("SoftAssertions"));
 
-        if (softAssertableButton == false) {
+        if (!softAssertableButton) {
             show2mo.click();
         }
 
