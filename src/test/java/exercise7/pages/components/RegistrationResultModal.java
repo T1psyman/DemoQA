@@ -5,19 +5,19 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
-public class RegistrationResulModal {
-    public void verifyRegistrationModel() {
+public class RegistrationResultModal {
+    public void verifyRegistrationModalAppears() {
         $(".modal-dialog").should(appear);
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
 
     }
 
-    public void verifyRegistration(String key, String value) {
+    public void verifyModalTableItem(String key, String value) {
         $(".modal-body").$(byText(key)).
                 parent().shouldHave(text(value));
     }
 
-    public void closeRegistrationFrom() {
+    public void closeRegistrationForm() {
         $("#closeLargeModal").click();
     }
 
