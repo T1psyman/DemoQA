@@ -6,19 +6,24 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class RegistrationResultModal {
-    public void verifyRegistrationModalAppears() {
+    public RegistrationResultModal verifyRegistrationModalAppears() {
         $(".modal-dialog").should(appear);
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
 
+        return this;
     }
 
-    public void verifyModalTableItem(String key, String value) {
+    public RegistrationResultModal verifyModalTableItem(String key, String value) {
         $(".modal-body").$(byText(key)).
                 parent().shouldHave(text(value));
+
+        return this;
     }
 
-    public void closeRegistrationForm() {
+    public RegistrationResultModal closeRegistrationForm() {
         $("#closeLargeModal").click();
+
+        return this;
     }
 
 }
